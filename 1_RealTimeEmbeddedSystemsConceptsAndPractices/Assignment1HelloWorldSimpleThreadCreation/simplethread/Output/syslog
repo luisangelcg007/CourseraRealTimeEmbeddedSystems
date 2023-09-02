@@ -1,0 +1,3 @@
+Sep  2 03:12:41 Ubuntu18 pthread[8259]: [COURSE:1][ASSIGNMENT:1] Linux Ubuntu18 5.4.0-84-generic #94~18.04.1-Ubuntu SMP Thu Aug 26 23:17:46 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+Sep  2 03:12:41 Ubuntu18 pthread[8259]: [COURSE:1][ASSIGNMENT:1] Hello World from Thread!
+Sep  2 03:12:41 Ubuntu18 pthread[8259]: [COURSE:1][ASSIGNMENT:1] Hello World from Main!
