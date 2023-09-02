@@ -28,9 +28,15 @@ void *printMessageThread(void *threadp)
 int main (int argc, char *argv[])
 {    struct utsname unameData;
 
+    char buffer[1024];
+
+    // execute uname -a and read output into buffer
+    FILE* uname_output = popen("uname -a", "r");
+    fgets(buffer, sizeof(buffer), uname_output);
+    pclose(uname_output);
+
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-    uname(&unameData);
-    syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:1] %s", unameData.sysname);
+    syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:1] %s", buffer);
     closelog();
 
     for(int i = 0; i < NUM_THREADS; i++)
@@ -45,6 +51,11 @@ int main (int argc, char *argv[])
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
     syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:1] Hello World from Main!");
     closelog();
+
+    for(int i = 0; i < NUM_THREADS; i++)
+    {
+       pthread_join(threads[i], NULL);
+    }
 
     return 0;
 }
