@@ -1,4 +1,4 @@
-# CourseraRealTimeEmbeddedSystems
+# Real Time Embedded Systems
 
 <img width="820" height="248" src="https://github.com/luisangelcg007/CourseraRealTimeEmbeddedSystems/assets/6488583/217ffb5e-9674-4eb9-acce-57df5144a74b">
 
