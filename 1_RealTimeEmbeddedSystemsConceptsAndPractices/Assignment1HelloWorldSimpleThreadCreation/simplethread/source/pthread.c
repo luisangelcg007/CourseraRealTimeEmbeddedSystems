@@ -3,12 +3,15 @@
 #include <stdio.h>
 #include <sched.h>
 
-#define NUM_THREADS 12
 
-typedef struct
+#include "globalDefine.h"
+
+//#define NUM_THREADS 12
+
+/*typedef struct
 {
     int threadIdx;
-} threadParams_t;
+} threadParams_t;*/
 
 
 // POSIX thread declarations and scheduling attributes
@@ -53,3 +56,16 @@ int main (int argc, char *argv[])
 
    printf("TEST COMPLETE\n");
 }
+/*
+#include <pthread.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <sched.h>
+#include <syslog.h>
+#include <sys/utsname.h>
+#include "globalDefine.h"
+
+// POSIX thread declarations and scheduling attributes
+pthread_t threads[NUM_THREADS];
+threadParams_t threadParams[NUM_THREADS];
+*/

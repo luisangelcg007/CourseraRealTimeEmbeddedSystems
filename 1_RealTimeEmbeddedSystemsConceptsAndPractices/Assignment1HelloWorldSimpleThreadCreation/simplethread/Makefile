@@ -6,8 +6,8 @@ CDEFS=
 CFLAGS= -O0 -g $(INCLUDE_DIRS) $(CDEFS)
 LIBS= 
 
-HFILES= 
-CFILES= pthread.c
+HFILES= source/globalDefine.h
+CFILES= source/pthread.c
 
 SRCS= ${HFILES} ${CFILES}
 OBJS= ${CFILES:.c=.o}
@@ -18,7 +18,7 @@ clean:
 	-rm -f *.o *.d
 	-rm -f pthread
 
-pthread: pthread.o
+pthread: $(OBJS)
 	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $@.o -lpthread
 
 depend:
