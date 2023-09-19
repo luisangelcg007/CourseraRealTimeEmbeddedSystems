@@ -7,7 +7,7 @@
 #include "globalDefine.h"
 
 // POSIX thread declarations and scheduling attributes
-pthread_t threads[NUM_THREADS];
+pthread_t thread[NUM_THREADS];
 threadParams_t threadParams[NUM_THREADS];
 
 /**
@@ -51,12 +51,10 @@ int main (int argc, char *argv[])
 
     for(int i = 1; i <= NUM_THREADS; i++)
     {
-        pthread_t thread;
-        threadParams_t threadParams;
-        threadParams.threadIdx=i;
+        threadParams[i].threadIdx=i;
 
-        pthread_create(&thread, NULL, printMessageThread, (void *)&threadParams);
-        pthread_join(thread, NULL);
+        pthread_create(&thread[i], NULL, printMessageThread, (void *)&threadParams[i]);
+        pthread_join(thread[i], NULL);
     }
 
     for(int i = 0; i < NUM_THREADS; i++)

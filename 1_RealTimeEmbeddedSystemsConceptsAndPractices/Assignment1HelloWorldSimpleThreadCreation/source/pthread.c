@@ -7,7 +7,7 @@
 #include "globalDefine.h"
 
 // POSIX thread declarations and scheduling attributes
-pthread_t threads[NUM_THREADS];
+pthread_t thread[NUM_THREADS];
 threadParams_t threadParams[NUM_THREADS];
 
 /**
@@ -20,6 +20,8 @@ void *printMessageThread(void *threadp)
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
     syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:1] Hello World from Thread!");
     closelog();
+
+    return NULL;
 }
 
 /**
@@ -29,6 +31,9 @@ int main (int argc, char *argv[])
 {    struct utsname unameData;
 
     char buffer[1024];
+
+    // Clear the syslog file
+    system("truncate -s 0 /var/log/syslog");
 
     // execute uname -a and read output into buffer
     FILE* uname_output = popen("uname -a", "r");
@@ -41,11 +46,9 @@ int main (int argc, char *argv[])
 
     for(int i = 0; i < NUM_THREADS; i++)
     {
-        pthread_t thread;
-        threadParams_t threadParams;
-        threadParams.threadIdx=i;
+        threadParams[i].threadIdx=i;
 
-        pthread_create(&thread, NULL, printMessageThread, (void *)&threadParams);
+        pthread_create(&thread[i], NULL, printMessageThread, (void *)&threadParams[i]);
     }
 
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
@@ -54,7 +57,7 @@ int main (int argc, char *argv[])
 
     for(int i = 0; i < NUM_THREADS; i++)
     {
-       pthread_join(threads[i], NULL);
+       pthread_join(thread[i], NULL);
     }
 
     return 0;
