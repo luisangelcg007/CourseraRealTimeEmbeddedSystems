@@ -26,6 +26,7 @@ void *printMessageThread(void *threadp)
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
     syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:2] Thread idx=%d, sum[1...%d]=%d", params->threadIdx, params->threadIdx, sum);
     closelog();
+    pthread_exit(NULL);
 }
 
 /**
@@ -52,6 +53,7 @@ int main (int argc, char *argv[])
         threadParams.threadIdx=i;
 
         pthread_create(&thread, NULL, printMessageThread, (void *)&threadParams);
+        pthread_join(thread, NULL);
     }
 
     for(int i = 0; i < NUM_THREADS; i++)
