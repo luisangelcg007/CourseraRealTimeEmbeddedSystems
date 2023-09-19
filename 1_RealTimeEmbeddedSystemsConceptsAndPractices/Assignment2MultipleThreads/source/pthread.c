@@ -24,7 +24,7 @@ void *printMessageThread(void *threadp)
     }
 
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-    syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:2]  Thread idx=%d, sum[1...%d]=%d", params->threadIdx, params->threadIdx, sum);
+    syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:2] Thread idx=%d, sum[1...%d]=%d", params->threadIdx, params->threadIdx, sum);
     closelog();
 }
 
