@@ -1,64 +1,47 @@
 
-Sep 18 20:57:57 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:1] Linux luis-AOA150 4.15.0-142-generic #146~16.04.1-Ubuntu SMP Tue Apr 13 09:26:57 UTC 2021 i686 i686 i686 GNU/Linux
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=10, sum[1...10]=55
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=15, sum[1...15]=120
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 4 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=15, sum[1...15]=120]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=23, sum[1...23]=276
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=46, sum[1...46]=300
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 2 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=46, sum[1...46]=300]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=46, sum[1...46]=325
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 2 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=46, sum[1...46]=325]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=46, sum[1...46]=1081
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=46, sum[1...46]=1081
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=47, sum[1...47]=1128
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 24 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=47, sum[1...47]=1128]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=48, sum[1...48]=1176
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=74, sum[1...74]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 11 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=74, sum[1...74]=2775]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=47, sum[1...47]=1128
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=74, sum[1...74]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 3 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=74, sum[1...74]=2775]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=47, sum[1...47]=1128
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=74, sum[1...74]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=47, sum[1...47]=1128
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 2 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=47, sum[1...47]=1128]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=74, sum[1...74]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 2 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=74, sum[1...74]=2775]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=47, sum[1...47]=1128
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=74, sum[1...74]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=75, sum[1...75]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=47, sum[1...47]=1128
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=77, sum[1...77]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=77, sum[1...77]=3003
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 3 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=77, sum[1...77]=3003]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=77, sum[1...77]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=77, sum[1...77]=2775
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=78, sum[1...78]=3081
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=80, sum[1...80]=3240
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=80, sum[1...80]=3240
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=81, sum[1...81]=3321
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=83, sum[1...83]=3486
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=83, sum[1...83]=3486
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=84, sum[1...84]=3570
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=85, sum[1...85]=3655
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=87, sum[1...87]=3828
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=88, sum[1...88]=3916
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=88, sum[1...88]=3828
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=89, sum[1...89]=4005
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=89, sum[1...89]=4005
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=91, sum[1...91]=4186
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=94, sum[1...94]=4465
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=94, sum[1...94]=4465
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=108, sum[1...108]=5886
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=94, sum[1...94]=4465
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=111, sum[1...111]=6216
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 6 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=111, sum[1...111]=6216]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=112, sum[1...112]=6328
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=111, sum[1...111]=6216
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=112, sum[1...112]=6328
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 4 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=112, sum[1...112]=6328]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=111, sum[1...111]=6216
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 2 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=111, sum[1...111]=6216]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=117, sum[1...117]=6903
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: message repeated 4 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=117, sum[1...117]=6903]
-Sep 18 20:57:58 luis-AOA150 pthread[8393]: [COURSE:1][ASSIGNMENT:2]  Thread idx=118, sum[1...118]=7021
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:1] Linux luis-AOA150 4.15.0-142-generic #146~16.04.1-Ubuntu SMP Tue Apr 13 09:26:57 UTC 2021 i686 i686 i686 GNU/Linux
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=23, sum[1...23]=276
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=23, sum[1...23]=276
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=56, sum[1...56]=276
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=56, sum[1...56]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=56, sum[1...56]=276
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=56, sum[1...56]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=56, sum[1...56]=276
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=56, sum[1...56]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 18 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=56, sum[1...56]=1596]
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=65, sum[1...65]=2145
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 2 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=65, sum[1...65]=2145]
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 3 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596]
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=72, sum[1...72]=2628
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=72, sum[1...72]=2628
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 7 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596]
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 4 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596]
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=72, sum[1...72]=2628
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 2 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=72, sum[1...72]=2628]
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=1596
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=66, sum[1...66]=2211
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=72, sum[1...72]=2628
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 2 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=72, sum[1...72]=2628]
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=92, sum[1...92]=4278
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 9 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=92, sum[1...92]=4278]
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: [COURSE:1][ASSIGNMENT:2]  Thread idx=115, sum[1...115]=6670
+Sep 18 21:25:24 luis-AOA150 pthread[9194]: message repeated 32 times: [ [COURSE:1][ASSIGNMENT:2]  Thread idx=115, sum[1...115]=6670]
