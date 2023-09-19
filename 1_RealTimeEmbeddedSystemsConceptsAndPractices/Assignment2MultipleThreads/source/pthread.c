@@ -46,7 +46,7 @@ int main (int argc, char *argv[])
     pclose(uname_output);
 
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-    syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:1]: %s", buffer);
+    syslog(LOG_INFO, "[COURSE:1][ASSIGNMENT:2]: %s", buffer);
     closelog();
 
     for(int i = 1; i <= NUM_THREADS; i++)
