@@ -1,0 +1,3 @@
+[submodule "1_RealTimeEmbeddedSystemsConceptsAndPractices/RTES-ECEE-5623"]
+	path = 1_RealTimeEmbeddedSystemsConceptsAndPractices/RTES-ECEE-5623
+	url = https://github.com/siewertsmooc/RTES-ECEE-5623.git
