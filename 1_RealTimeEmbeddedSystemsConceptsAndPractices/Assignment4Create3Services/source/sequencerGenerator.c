@@ -10,6 +10,7 @@
 #include <time.h> 
 #include <signal.h>
 #include <unistd.h>
+#include <semaphore.h>
 #include "globalDefine.h"
 
 // POSIX thread declarations and scheduling attributes
@@ -75,7 +76,7 @@ void *Service_1(void *threadp)
         //Do work
 
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S1 T1=%d ms", (totalCountere*10));
+        syslog(LOG_INFO, "[Service Generator]: S1 T1=%d ms", (totalCountere*10L));
         closelog();
         pthread_exit(NULL);
     }
@@ -90,7 +91,7 @@ void *Service_2(void *threadp)
         //Do work
 
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S2 T2=%d ms", (totalCountere*10));
+        syslog(LOG_INFO, "[Service Generator]: S2 T2=%d ms", (totalCountere*10L));
         closelog();
         pthread_exit(NULL);
     }
@@ -105,7 +106,7 @@ void *Service_3(void *threadp)
         //Do work
 
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S3 T3=%d ms", (totalCountere*10));
+        syslog(LOG_INFO, "[Service Generator]: S3 T3=%d ms", (totalCountere*10L));
         closelog();
         pthread_exit(NULL);
     }
