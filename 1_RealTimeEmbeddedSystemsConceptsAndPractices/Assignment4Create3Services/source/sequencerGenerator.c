@@ -11,6 +11,10 @@
 #define USEC_PER_MSEC (1000)
 
 struct timeval start_time_val;
+typedef struct
+{
+    int threadIdx;
+} threadParams_t;
 
 
 // Service_3 thread
