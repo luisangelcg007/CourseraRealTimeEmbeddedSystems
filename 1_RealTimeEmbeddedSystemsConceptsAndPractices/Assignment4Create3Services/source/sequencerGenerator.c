@@ -78,7 +78,6 @@ void *Service_1(void *threadp)
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
         syslog(LOG_INFO, "[Service Generator]: S1 T1=%d ms", (totalCountere*10L));
         closelog();
-        pthread_exit(NULL);
     }
 }
 
@@ -93,7 +92,6 @@ void *Service_2(void *threadp)
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
         syslog(LOG_INFO, "[Service Generator]: S2 T2=%d ms", (totalCountere*10L));
         closelog();
-        pthread_exit(NULL);
     }
 }
 
@@ -108,7 +106,6 @@ void *Service_3(void *threadp)
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
         syslog(LOG_INFO, "[Service Generator]: S3 T3=%d ms", (totalCountere*10L));
         closelog();
-        pthread_exit(NULL);
     }
 }
 
@@ -172,6 +169,10 @@ int main (int argc, char *argv[])
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
     syslog(LOG_INFO, "[Service Generator]: %s", buffer);
     closelog();    
+
+    sem_init(&semS1, 0, 0);
+    sem_init(&semS2, 0, 0);
+    sem_init(&semS3, 0, 0);
 
     pthread_create(&threads[0], &attr, Service_1, (void *)&threadParams[0]);
     pthread_create(&threads[1], &attr, Service_2, (void *)&threadParams[0]);
