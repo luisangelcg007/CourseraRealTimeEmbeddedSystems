@@ -10,6 +10,8 @@
 #include "globalDefine.h"
 
 #define USEC_PER_MSEC (1000)
+#define TRUE (1)
+#define FALSE (0)
 
 struct timeval start_time_val;
 int abortTest=FALSE;
