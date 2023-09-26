@@ -19,7 +19,7 @@ clean:
 	-rm -f sequencerGenerator
 
 sequencerGenerator: $(OBJS)
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $@.o -lsequencerGenerator
+	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $@.o -lpthread
 
 depend:
 

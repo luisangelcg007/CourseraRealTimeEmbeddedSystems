@@ -1,5 +1,5 @@
 #define _GNU_SOURCE
-#include <sequencerGenerator.h>
+#include <pthread.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <sched.h>
