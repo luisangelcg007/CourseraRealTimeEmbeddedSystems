@@ -89,7 +89,7 @@ int main(void)
 
     // create the sequencer thread
 
-    rc = pthread_create(&threadParams[0].threadId, NULL, Sequencer, &threadParams[0]);
+    rc = pthread_create(&threadParams[0].threadIdx, NULL, Sequencer, &threadParams[0]);
     if (rc)
     {
         printf("Error creating sequencer thread\n");
@@ -98,7 +98,7 @@ int main(void)
 
     // create the service_3 thread
 
-    rc = pthread_create(&threadParams[1].threadId, NULL, Service_3, &threadParams[1]);
+    rc = pthread_create(&threadParams[1].threadIdx, NULL, Service_3, &threadParams[1]);
     if (rc)
     {
         printf("Error creating service_3 thread\n");
@@ -109,7 +109,7 @@ int main(void)
 
     for (i=0; i<NUM_THREADS; i++)
     {
-        rc = pthread_join(threadParams[i].threadId, NULL);
+        rc = pthread_join(threadParams[i].threadIdx, NULL);
         if (rc)
         {
             printf("Error joining thread %d\n", i);
