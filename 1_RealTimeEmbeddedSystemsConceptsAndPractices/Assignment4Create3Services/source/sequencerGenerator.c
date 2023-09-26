@@ -7,15 +7,13 @@
 #include <sys/time.h>
 #include <semaphore.h>
 #include <syslog.h>
+#include "globalDefine.h"
 
 #define USEC_PER_MSEC (1000)
 
 struct timeval start_time_val;
-typedef struct
-{
-    int threadIdx;
-} threadParams_t;
-
+int abortS3=FALSE;
+sem_t semS3;
 
 // Service_3 thread
 
