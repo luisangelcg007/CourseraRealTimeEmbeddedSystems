@@ -17,6 +17,7 @@ struct timeval start_time_val;
 int abortTest=FALSE;
 int abortS3=FALSE;
 sem_t semS3;
+unsigned long long sequencePeriods;
 
 // Service_3 thread
 
@@ -65,7 +66,7 @@ void *Sequencer(void *threadp)
 
         gettimeofday(&current_time_val, (struct timezone *)0);
         syslog(LOG_CRIT, "Sequencer cycle %llu @ sec=%d, msec=%d\n", seqCnt, (int)(current_time_val.tv_sec-start_time_val.tv_sec), (int)current_time_val.tv_usec/USEC_PER_MSEC);
-    } while(!abortTest && (seqCnt < threadParams->sequencePeriods));
+    } while(!abortTest && (seqCnt < sequencePeriods));
 
     sem_post(&semS3);
     abortS3=TRUE;
@@ -105,6 +106,7 @@ int main(void)
         exit(-1);
     }
 
+    sequencePeriods=2000;
     // wait for all threads to terminate
 
     for (i=0; i<NUM_THREADS; i++)
