@@ -23,22 +23,20 @@ static timer_t timer_1;
 static struct itimerspec itime = {{1,0}, {1,0}};
 static struct itimerspec last_itime;
 static unsigned long long interruptCounter = 0;
-static unsigned long long totalCountere = 0;
+static unsigned long long totalCounter = 0;
 sem_t semS1, semS2, semS3;
 
 // it is called every 10 ms
 void Sequencer(int id)
 {
-    struct timespec current_time_val;
-    double current_realtime;
     int rc, flags=0;
 
-    if(interruptCounter ==30)
+    if(interruptCounter == 30)
     {
         interruptCounter = 0;
     }
 
-    if(interruptCounter % 2)
+    if(interruptCounter % 2 == 0)
     {
         //Service_1 start
         sem_post(&semS1);
@@ -58,13 +56,13 @@ void Sequencer(int id)
     interruptCounter == 15 ||
     interruptCounter == 17)
     {
-        //Service_2 start
+        //Service_3 start
         sem_post(&semS3);
     }
     
     // received interval timer signal
     interruptCounter++;
-    totalCountere++;
+    totalCounter++;
 }
 
 void *Service_1(void *threadp)
@@ -76,7 +74,7 @@ void *Service_1(void *threadp)
         //Do work
 
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S1 T1=%d ms", (totalCountere*10L));
+        syslog(LOG_INFO, "[Service Generator]: S1 T1=%d ms", ((totalCounter-1)*10L));
         closelog();
     }
 }
@@ -90,7 +88,7 @@ void *Service_2(void *threadp)
         //Do work
 
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S2 T2=%d ms", (totalCountere*10L));
+        syslog(LOG_INFO, "[Service Generator]: S2 T2=%d ms", ((totalCounter-1)*10L));
         closelog();
     }
 }
@@ -104,7 +102,7 @@ void *Service_3(void *threadp)
         //Do work
 
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S3 T3=%d ms", (totalCountere*10L));
+        syslog(LOG_INFO, "[Service Generator]: S3 T3=%d ms", ((totalCounter-1)*10L));
         closelog();
     }
 }
