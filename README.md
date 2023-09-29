@@ -1,6 +1,7 @@
 # [Real-time embedded systems, Coursera specialization course](https://www.coursera.org/specializations/real-time-embedded-systems) 
 
-<img width="820" height="248" src="https://github.com/luisangelcg007/CourseraRealTimeEmbeddedSystems/assets/6488583/217ffb5e-9674-4eb9-acce-57df5144a74b">
+<img width="561" alt="image" src="https://github.com/luisangelcg007/CourseraRealTimeEmbeddedSystems/assets/6488583/c00a7709-a30d-447a-86b9-ad6e65b1d7ca">
+
 
 ## My journey into real-time embedded systems
 
