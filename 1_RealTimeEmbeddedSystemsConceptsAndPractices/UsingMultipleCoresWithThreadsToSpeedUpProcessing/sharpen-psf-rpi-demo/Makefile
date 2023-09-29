@@ -16,7 +16,7 @@ CDEFS=
 #CFLAGS= -O0 -msse3 -malign-double $(INCLUDE_DIRS) $(CDEFS)
 #CFLAGS= -O2 -msse3 -malign-double $(INCLUDE_DIRS) $(CDEFS)
 #CFLAGS= -O3 -msse3 $(INCLUDE_DIRS) $(CDEFS)
-#CFLAGS= -O3 $(INCLUDE_DIRS) $(CDEFS)
+#CFLAGS= -O3 $(INCLUDE_DIRS) $(CDEFS) #lento
 CFLAGS= -O3 -march=i686 $(INCLUDE_DIRS) $(CDEFS) #rapido optimizado para el priocesador i686
 #CFLAGS= -O3 -mcpu=cortex-a7 -mfpu=neon-vfpv4 $(INCLUDE_DIRS) $(CDEFS)
 
