@@ -11,6 +11,7 @@
 #include <signal.h>
 #include <unistd.h>
 #include <semaphore.h>
+#include <time.h>
 #include "globalDefine.h"
 
 // POSIX thread declarations and scheduling attributes
@@ -34,14 +35,6 @@ void Sequencer(int id)
 {
     int rc, flags=0;
 
-    if(interruptCounter == 30)
-    {
-        interruptCounter = 0;
-        abortService1 = TRUE;
-        abortService2 = TRUE;
-        abortService3 = TRUE;
-    }
-
     if(interruptCounter % 2 == 0)
     {
         //Service_1 start
@@ -57,7 +50,6 @@ void Sequencer(int id)
     }
 
     if(interruptCounter == 3 ||
-    interruptCounter == 6 ||
     interruptCounter == 5 ||
     interruptCounter == 15 ||
     interruptCounter == 17)
@@ -69,58 +61,96 @@ void Sequencer(int id)
     // received interval timer signal
     interruptCounter++;
     totalCounter++;
+    
+    if(interruptCounter == 30)
+    {
+        interruptCounter = 0;
+        abortService1 = TRUE;
+        abortService2 = TRUE;
+        abortService3 = TRUE;
+    }
 }
 
 void *Service_1(void *threadp)
 {
-    struct timespec timeEvents = {0, 0};
+    struct timeval current_time_val;
     int core = sched_getcpu();
     int serviceCounter =0;
+    double timeMs=0.0;
 
     while(!abortService1)
     {
         // wait for service request from the sequencer
         sem_wait(&semS1);
-        //Do work
-        clock_gettime(CLOCK_MONOTONIC, &timeEvents);
-        openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 1 start %i @ <%i> on core <%i>", serviceCounter, timeEvents.tv_nsec, core);
-        closelog();
+        
+        if(!abortService2)
+        {
+          //Do work
+          gettimeofday(&current_time_val, (struct timezone *)0);        
+          timeMs = (double)current_time_val.tv_usec/1000000;
+          serviceCounter = serviceCounter +1;
+  
+          openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
+          syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 1 start %i @ <%f> on core <%i>", serviceCounter, timeMs, core);
+          closelog();
+        }
     }
+    pthread_exit((void *)0);
 }
 
 void *Service_2(void *threadp)
 {
-    struct timespec timeEvents = {0, 0};
+    struct timeval current_time_val;
     int core = sched_getcpu();
     int serviceCounter =0;
+    double timeMs=0.0;
+
     while(!abortService2)
     {
         // wait for service request from the sequencer
         sem_wait(&semS2);
+        
         //Do work
-        clock_gettime(CLOCK_MONOTONIC, &timeEvents);
-        openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 2 start %i @ <%i> on core <%i>", serviceCounter, timeEvents.tv_nsec, core);
-        closelog();
+        
+        if(!abortService2)
+        {
+          gettimeofday(&current_time_val, (struct timezone *)0);        
+          timeMs = (double)current_time_val.tv_usec/1000000;
+          serviceCounter = serviceCounter +1;
+   
+          openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
+          syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 2 start %i @ <%f> on core <%i>", serviceCounter, timeMs, core);
+          closelog();
+         }
     }
+    pthread_exit((void *)0);
 }
 
 void *Service_3(void *threadp)
 {
-    struct timespec timeEvents = {0, 0};
+    struct timeval current_time_val;
     int core = sched_getcpu();
     int serviceCounter =0;
+    double timeMs=0.0;
+
     while(!abortService3)
     {
         // wait for service request from the sequencer
-        sem_wait(&semS2);
-        //Do work
-        clock_gettime(CLOCK_MONOTONIC, &timeEvents);
-        openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 3 start %i @ <%i> on core <%i>", serviceCounter, timeEvents.tv_nsec, core);
-        closelog();
+        sem_wait(&semS3);
+        
+        if(!abortService2)
+        {
+          //Do work
+          gettimeofday(&current_time_val, (struct timezone *)0);        
+          timeMs = (double)current_time_val.tv_usec/1000000;
+          serviceCounter = serviceCounter +1;
+  
+          openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
+          syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 3 start %i @ <%f> on core <%i>", serviceCounter, timeMs, core);
+          closelog();
+        }
     }
+    pthread_exit((void *)0);
 }
 
 /**

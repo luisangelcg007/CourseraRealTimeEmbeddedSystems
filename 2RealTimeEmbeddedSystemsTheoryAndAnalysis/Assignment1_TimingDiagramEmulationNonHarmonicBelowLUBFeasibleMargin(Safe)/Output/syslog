@@ -1,0 +1,38 @@
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [Service Generator]: Linux luis-AOA150 4.15.0-142-generic #146~16.04.1-Ubuntu SMP Tue Apr 13 09:26:57 UTC 2021 i686 i686 i686 GNU/Linux
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 1 @ <0.517770> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 2 start 1 @ <0.527764> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 2 @ <0.537760> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 3 start 1 @ <0.547723> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 3 @ <0.557763> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 3 start 2 @ <0.567740> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 4 @ <0.577724> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 5 @ <0.597760> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 6 @ <0.617718> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 2 start 2 @ <0.627724> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 7 @ <0.637744> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 8 @ <0.657746> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 3 start 3 @ <0.667745> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 9 @ <0.677763> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 3 start 4 @ <0.687726> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 10 @ <0.697723> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 11 @ <0.717743> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 2 start 3 @ <0.727722> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 12 @ <0.737758> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 13 @ <0.757750> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 14 @ <0.777761> on core <1>
+Oct  4 02:50:50 luis-AOA150 pthread[26802]: [COURSE:2][ASSIGNMENT:1]: Thread 1 start 15 @ <0.797709> on core <1>
+Oct  4 02:52:12 luis-AOA150 kernel: [15156.193989] R8188EU: sta recv deauth reason code(6) sta:58:25:75:a2:31:ac
+Oct  4 02:52:12 luis-AOA150 kernel: [15156.201246] R8188EU: indicate disassoc
+Oct  4 02:52:12 luis-AOA150 wpa_supplicant[883]: wlxc04a0029b749: CTRL-EVENT-DISCONNECTED bssid=58:25:75:a2:31:ac reason=0
+Oct  4 02:52:12 luis-AOA150 NetworkManager[737]: <info>  [1696405932.2116] device (wlxc04a0029b749): supplicant interface state: completed -> disconnected
+Oct  4 02:52:12 luis-AOA150 NetworkManager[737]: <info>  [1696405932.3077] device (wlxc04a0029b749): supplicant interface state: disconnected -> scanning
+Oct  4 02:52:13 luis-AOA150 wpa_supplicant[883]: wlxc04a0029b749: Trying to associate with 58:25:75:a2:31:ac (SSID='MEGACABLE-2.4G-F5A3' freq=2442 MHz)
+Oct  4 02:52:13 luis-AOA150 wpa_supplicant[883]: wlxc04a0029b749: Association request to the driver failed
+Oct  4 02:52:13 luis-AOA150 NetworkManager[737]: <info>  [1696405933.7177] device (wlxc04a0029b749): supplicant interface state: scanning -> associating
+Oct  4 02:52:13 luis-AOA150 wpa_supplicant[883]: wlxc04a0029b749: Associated with 58:25:75:a2:31:ac
+Oct  4 02:52:13 luis-AOA150 kernel: [15157.841673] R8188EU: assoc success
+Oct  4 02:52:13 luis-AOA150 NetworkManager[737]: <info>  [1696405933.8469] device (wlxc04a0029b749): supplicant interface state: associating -> associated
+Oct  4 02:52:13 luis-AOA150 wpa_supplicant[883]: wlxc04a0029b749: WPA: Key negotiation completed with 58:25:75:a2:31:ac [PTK=CCMP GTK=TKIP]
+Oct  4 02:52:13 luis-AOA150 wpa_supplicant[883]: wlxc04a0029b749: CTRL-EVENT-CONNECTED - Connection to 58:25:75:a2:31:ac completed [id=0 id_str=]
+Oct  4 02:52:13 luis-AOA150 NetworkManager[737]: <info>  [1696405933.8642] device (wlxc04a0029b749): supplicant interface state: associated -> 4-way handshake
+Oct  4 02:52:13 luis-AOA150 NetworkManager[737]: <info>  [1696405933.8719] device (wlxc04a0029b749): supplicant interface state: 4-way handshake -> completed
