@@ -25,7 +25,7 @@ static struct itimerspec itime = {{1,0}, {1,0}};
 static struct itimerspec last_itime;
 static unsigned long long interruptCounter = 0;
 static unsigned long long totalCounter = 0;
-sem_t semS1, semS2, semS3, sem4;
+sem_t semS1, semS2, semS3, semS4;
 int abortService1 = FALSE;
 int abortService2 = FALSE;
 int abortService3 = FALSE;
@@ -53,7 +53,7 @@ void Sequencer(int id)
     
     if(interruptCounter == 1 || 
     interruptCounter == 5 || 
-    interruptCounter == 11
+    interruptCounter == 11 ||
     interruptCounter == 15)
     {
         //Service_2 start

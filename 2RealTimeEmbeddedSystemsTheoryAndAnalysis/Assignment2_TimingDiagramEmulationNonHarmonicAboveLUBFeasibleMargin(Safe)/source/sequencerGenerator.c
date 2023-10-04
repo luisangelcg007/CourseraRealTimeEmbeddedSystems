@@ -43,7 +43,7 @@ void Sequencer(int id)
     
     if(interruptCounter == 1 || 
     interruptCounter == 5 || 
-    interruptCounter == 11 
+    interruptCounter == 11 || 
     interruptCounter == 15 || 
     interruptCounter == 21 || 
     interruptCounter == 25)
