@@ -211,7 +211,7 @@ int main (int argc, char *argv[])
     pclose(uname_output);
 
     openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-    syslog(LOG_INFO, "[Service Generator]: %s", buffer);
+    syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: %s", buffer);
     closelog();    
 
     sem_init(&semS1, 0, 0);
