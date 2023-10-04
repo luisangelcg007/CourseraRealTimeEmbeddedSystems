@@ -25,6 +25,9 @@ static struct itimerspec last_itime;
 static unsigned long long interruptCounter = 0;
 static unsigned long long totalCounter = 0;
 sem_t semS1, semS2, semS3;
+int abortService1 = FALSE;
+int abortService2 = FALSE;
+int abortService3 = FALSE;
 
 // it is called every 10 ms
 void Sequencer(int id)
@@ -34,6 +37,9 @@ void Sequencer(int id)
     if(interruptCounter == 30)
     {
         interruptCounter = 0;
+        abortService1 = TRUE;
+        abortService2 = TRUE;
+        abortService3 = TRUE;
     }
 
     if(interruptCounter % 2 == 0)
@@ -67,42 +73,52 @@ void Sequencer(int id)
 
 void *Service_1(void *threadp)
 {
-    while(TRUE)
+    struct timespec timeEvents = {0, 0};
+    int core = sched_getcpu();
+    int serviceCounter =0;
+
+    while(!abortService1)
     {
         // wait for service request from the sequencer
         sem_wait(&semS1);
         //Do work
-
+        clock_gettime(CLOCK_MONOTONIC, &timeEvents);
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S1 T1=%d ms", ((totalCounter-1)*10L));
+        syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 1 start %i @ <%i> on core <%i>", serviceCounter, timeEvents.tv_nsec, core);
         closelog();
     }
 }
 
 void *Service_2(void *threadp)
 {
-    while(TRUE)
+    struct timespec timeEvents = {0, 0};
+    int core = sched_getcpu();
+    int serviceCounter =0;
+    while(!abortService2)
     {
         // wait for service request from the sequencer
         sem_wait(&semS2);
         //Do work
-
+        clock_gettime(CLOCK_MONOTONIC, &timeEvents);
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S2 T2=%d ms", ((totalCounter-1)*10L));
+        syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 2 start %i @ <%i> on core <%i>", serviceCounter, timeEvents.tv_nsec, core);
         closelog();
     }
 }
 
 void *Service_3(void *threadp)
 {
-    while(TRUE)
+    struct timespec timeEvents = {0, 0};
+    int core = sched_getcpu();
+    int serviceCounter =0;
+    while(!abortService3)
     {
         // wait for service request from the sequencer
-        sem_wait(&semS3);
+        sem_wait(&semS2);
         //Do work
-
+        clock_gettime(CLOCK_MONOTONIC, &timeEvents);
         openlog("pthread", LOG_PID|LOG_CONS, LOG_USER);
-        syslog(LOG_INFO, "[Service Generator]: S3 T3=%d ms", ((totalCounter-1)*10L));
+        syslog(LOG_INFO, "[COURSE:2][ASSIGNMENT:1]: Thread 3 start %i @ <%i> on core <%i>", serviceCounter, timeEvents.tv_nsec, core);
         closelog();
     }
 }
