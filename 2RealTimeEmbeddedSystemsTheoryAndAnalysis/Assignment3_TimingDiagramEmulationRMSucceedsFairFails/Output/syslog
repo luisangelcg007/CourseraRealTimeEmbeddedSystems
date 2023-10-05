@@ -1,0 +1,21 @@
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Linux luis-AOA150 4.15.0-142-generic #146~16.04.1-Ubuntu SMP Tue Apr 13 09:26:57 UTC 2021 i686 i686 i686 GNU/Linux
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 1 @ <0.388107> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 2 start 1 @ <0.398054> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 2 @ <0.408033> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 3 start 1 @ <0.418018> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 3 @ <0.428031> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 2 start 2 @ <0.438057> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 4 @ <0.448017> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 3 start 2 @ <0.458058> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 5 @ <0.468053> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 4 start 1 @ <0.478020> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 6 @ <0.488060> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 2 start 3 @ <0.498017> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 7 @ <0.508063> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 3 start 3 @ <0.518054> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 8 @ <0.528037> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 2 start 4 @ <0.538054> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 9 @ <0.548018> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 3 start 4 @ <0.558025> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 1 start 10 @ <0.568058> on core <1>
+Oct  4 15:11:50 luis-AOA150 pthread[20796]: [COURSE:2][ASSIGNMENT:3]: Thread 4 start 2 @ <0.578018> on core <1>
